@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 650)  {          /* 要滑動到選單的距離 */
+				$('.nav').addClass('navFixed');   /* 幫選單加上固定效果 */
+				} else {
+				$('.nav').removeClass('navFixed'); /* 移除選單固定效果 */
+				}
+			});
+		});
+	</script>
+	<script>
+        $(document).ready(function(){
+            for(i=0;i<3;i++){
+                $("#menu img:eq("+i+")").click({id:i},function(e){
+                    n=e.data.id
+                    change()
+                    clearInterval(clock)
+                    clock=setInterval(auto,3500)
+                })
+            }
+            n=0
+            clock=setInterval(auto,3500)
+            $("#products img").mouseover(function(){
+                clearInterval(clock)
+            })
+            $("#products img").mouseout(function(){
+                clock=setInterval(auto,3500)
+            })
+            function auto(){
+                n++
+                if(n>2){
+                    n=0
+                }
+                change()
+            }
+            function change(){
+                $("#products img").fadeOut(400,function(){
+                    $("#products img").attr("src","images/header_"+n+".png")
+                    $("#products img").fadeIn()
+                })
+                $("#products").css("background-image","url(images/images/header_"+n+".png)")
+                $("#menu img").attr("src","images/point_white.png")
+                $("#menu img:eq("+n+")").attr("src","images/point_gray.png")
+            }
+        })
+    </script>
+  </head>
+  <body>
+    <div id=all>
+		<div id=products><img src="images/header_0.png" width=100% ></div>
+		
+	</div>
+
+    <div class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">員工簡介</a></li><li><a href="index_photo.html">員工旅遊行程</a></li><li><a href="index_talk.html">公司陣容</a></li>
+        </ul>
+      </div>
+    </div>
+
+	<div><div id=menu style="width:50%"><img src="images/point_gray.png"><img src="images/point_white.png"><img src="images/point_white.png"></div>
+	
+    <div class="main">
+		<div class="container" style="text-align:center;">
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_1/index.html"><img id="bigheadtree" src="images/head_link_1.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_2/index.html"><img id="bigheadtree" src="images/head_link_2.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_3/index.html"><img id="bigheadtree" src="images/head_link_3.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_4/index.html"><img id="bigheadtree" src="images/head_link_4.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_5/index.html"><img id="bigheadtree" src="images/head_link_5.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_6/index.html"><img id="bigheadtree" src="images/head_link_6.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_7/index.html"><img id="bigheadtree" src="images/head_link_7.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_8/index.html"><img id="bigheadtree" src="images/head_link_8.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_9/index.html"><img id="bigheadtree" src="images/head_link_9.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_10/index.html"><img id="bigheadtree" src="images/head_link_10.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_11/index.html"><img id="bigheadtree" src="images/head_link_11.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_12/index.html"><img id="bigheadtree" src="images/head_link_12.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_13/index.html"><img id="bigheadtree" src="images/head_link_13.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_14/index.html"><img id="bigheadtree" src="images/head_link_14.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_15/index.html"><img id="bigheadtree" src="images/head_link_15.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_16/index.html"><img id="bigheadtree" src="images/head_link_16.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_17/index.html"><img id="bigheadtree" src="images/head_link_17.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_18/index.html"><img id="bigheadtree" src="images/head_link_18.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_19/index.html"><img id="bigheadtree" src="images/head_link_19.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_20/index.html"><img id="bigheadtree" src="images/head_link_20.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_21/index.html"><img id="bigheadtree" src="images/head_link_21.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_22/index.html"><img id="bigheadtree" src="images/head_link_22.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_23/index.html"><img id="bigheadtree" src="images/head_link_23.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_24/index.html"><img id="bigheadtree" src="images/head_link_24.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_25/index.html"><img id="bigheadtree" src="images/head_link_25.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_26/index.html"><img id="bigheadtree" src="images/head_link_26.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_27/index.html"><img id="bigheadtree" src="images/head_link_27.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_28/index.html"><img id="bigheadtree" src="images/head_link_28.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_29/index.html"><img id="bigheadtree" src="images/head_link_29.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_30/index.html"><img id="bigheadtree" src="images/head_link_30.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_31/index.html"><img id="bigheadtree" src="images/head_link_31.png" height="300" width="300"></a></div>
+			<div id="tree_link"><a href="https://ciwade870307.github.io/profile_32/index.html"><img id="bigheadtree" src="images/head_link_32.png" height="300" width="300"></a></div>
+			
+		</div>
+    </div>
+
+
+    <div class="footer">
+      <div class="container">
+        <p style="font-size:25px;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us&nbsp;&nbsp;</strong></p>
+      </div>
+	  <div class="container">
+		<a href="https://www.facebook.com/groups/227482207720310/"><img id="contactUs" src="images/contact.png" height="50"width="50"></a>
+      </div>
+    </div>
+  </body>
+</html>

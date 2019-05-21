@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 650)  {          /* 要滑動到選單的距離 */
+				$('.nav').addClass('navFixed');   /* 幫選單加上固定效果 */
+				} else {
+				$('.nav').removeClass('navFixed'); /* 移除選單固定效果 */
+				}
+			});
+		});
+	</script>
+	<script>
+        $(document).ready(function(){
+            for(i=0;i<3;i++){
+                $("#menu img:eq("+i+")").click({id:i},function(e){
+                    n=e.data.id
+                    change()
+                    clearInterval(clock)
+                    clock=setInterval(auto,3500)
+                })
+            }
+            n=0
+            clock=setInterval(auto,3500)
+            $("#products img").mouseover(function(){
+                clearInterval(clock)
+            })
+            $("#products img").mouseout(function(){
+                clock=setInterval(auto,3500)
+            })
+            function auto(){
+                n++
+                if(n>2){
+                    n=0
+                }
+                change()
+            }
+            function change(){
+                $("#products img").fadeOut(400,function(){
+                    $("#products img").attr("src","images/header_"+n+".png")
+                    $("#products img").fadeIn()
+                })
+                $("#products").css("background-image","url(images/images/header_"+n+".png)")
+                $("#menu img").attr("src","images/point_white.png")
+                $("#menu img:eq("+n+")").attr("src","images/point_gray.png")
+            }
+        })
+    </script>
+  </head>
+  <body>
+  
+	<div id=all>
+		<div id=products><img src="images/header_0.png" width=100% ></div>
+		
+	</div>
+    
+    <div class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">員工簡介</a></li><li><a href="index_photo.html">員工旅遊行程</a></li><li><a href="index_talk.html">公司陣容</a></li>
+        </ul>
+      </div>
+    </div>
+
+	<div><div id=menu style="width:50%"><img src="images/point_gray.png"><img src="images/point_white.png"><img src="images/point_white.png"></div>
+	
+	<div class="main">
+		<div class="container" style="margin:0; padding:0; max-width:100%;">
+			<h1 style="text-align:center;font-size:60px"><strong>[特選北海道～學生優惠搶購]森之精靈&middot;星夜成功湖畔賞鯨&middot;十八尖山雙纜車&middot;
+			米其林級水木餐廳精緻套餐&middot;風雲樓夜景俯瞰北海道</strong></h1>
+			<ul style="font-size:50px;margin-left:50px;">
+				<li>旅遊國家：日本</li>
+				<li>旅遊城市：北海道</li>
+				<li>旅遊天數：2年-2年半</li>
+				<li>出發日期：2015年10月</li>
+			</ul>
+			<div style="text-align:center;background-color:#DDDDDD;padding:20px 0">
+				<p style="margin:10px;">想去哪裡 :</p>
+				<a href="#date day1" style="font-size:35px; color:blue;text-decoration:underline; "><strong>第一站</strong></a><p style="font-size:40px; color:#333333 ; display:inline;"><strong>&rarr;</strong></p>
+				<a href="#date day2" style="font-size:35px; color:blue;text-decoration:underline; "><strong>第二站</strong></a><p style="font-size:40px; color:#333333 ; display:inline;"><strong>&rarr;</strong></p>
+				<a href="#date day3" style="font-size:35px; color:blue;text-decoration:underline; "><strong>第三站</strong></a><p style="font-size:40px; color:#333333 ; display:inline;"><strong>&rarr;</strong></p>
+				<a href="#date day4" style="font-size:35px; color:blue;text-decoration:underline; "><strong>第四站</strong></a>
+				<br>
+				<a href="#date day5" style="font-size:35px; color:blue;text-decoration:underline; "><strong>第五站</strong></a><p style="font-size:40px; color:#333333 ; display:inline;"><strong>&rarr;</strong></p>
+				<a href="#date day6" style="font-size:35px; color:blue;text-decoration:underline;"><strong>第六站</strong></a><p style="font-size:40px; color:#333333 ; display:inline;"><strong>&rarr;</strong></p>
+				<a href="#date day7" style="font-size:35px; color:blue;text-decoration:underline ;"><strong>第七站</strong></a><p style="font-size:40px; color:#333333 ; display:inline;"><strong>&rarr;</strong></p>
+				<a href="#date day8" style="font-size:35px; color:blue;text-decoration:underline ;"><strong>第八站</strong></a>
+			</div>
+			
+			<div id="date day1" style="background-color:#DDDDDD">	
+				<img id="photo" src="images/2015_1.jpg"	height="660" width="880" >	
+				<ul style="font-size:40px;margin:0px 50px">
+				<br>
+				<li>第一站</li>
+				<li>出發日期：2015年10月</li>
+				<li>原文假日營—原文營隊初體驗，享受被天真可愛的小孩控制的樂趣，當股員的感受令人驚艷！</li>
+				<li>住宿：新樂國小</li>
+				<br>
+				</ul>
+			</div>
+			<div id="date day2" style="background-color:#ffffff">	
+				<img id="photo" src="images/2016_2.jpg"	height="660" width="880" >	
+				<ul style="font-size:40px;margin:0px 50px">
+				<br>
+				<li>第二站</li>
+				<li>出發日期：2016年2月</li>
+				<li>原文冬令營—原文營隊第二次體驗，讓您熟能生巧，精益求精！＊特別贈送驚喜小禮物：營期免費延長至4天！
+				讓您一次帶營隊帶個過癮！沿途可深刻體驗18學長姐的溫柔美麗。</li>
+				<li>住宿：清華大學</li>
+				</ul>
+			</div>
+			<div id="date day3" style="background-color:#DDDDDD">	
+				<img id="photo" src="images/2016_3.jpg"	height="660" width="880" >	
+				<ul style="font-size:40px;margin:0px 50px">
+				<br>
+				<li>第三站</li>
+				<li>出發日期：2016年7月</li>
+				<li>原文大隊上山—欣賞新竹縣尖石鄉綿延不絕、蒼蘢蓊鬱的山脈。體驗最浪漫的森之步道（長達16k-32k），
+				在泰雅部落體驗最難忘的人文風情。在小隊長的導覽下，漫遊於部落的歷史迴廊。</li>
+				<li>注意事項：如遇颱風提早下山，將特別回饋您＊步行32k森之步道免費優惠乙次＊，歡迎您再次蒞臨！</li>
+				<li>住宿：泰崗部落、新光部落、司馬庫斯部落、養老部落</li>
+				<br>
+				</ul>
+			</div>
+			<div id="date day4" style="background-color:#ffffff">	
+				<img id="photo" src="images/2016_1.jpg"	height="660" width="880" >	
+				<ul style="font-size:40px;margin:0px 50px">
+				<br>
+				<li>第四站</li>
+				<li>出發日期：2016年9月</li>
+				<li>原文假日營—導遊劉于瑄小姐經驗豐富，遊歷無數原文營隊。除了體驗原文營隊帶來的淋漓暢快，
+				還加碼贈送＊20大一股員伴遊＊絕對超值！</li>
+				<li>住宿：梅花國小</li>
+				</ul>
+			</div>
+			<div id="date day5" style="background-color:#DDDDDD">	
+				<img id="photo" src="images/2017_2.jpg"	height="660" width="880" >	
+				<ul style="font-size:40px;margin:0px 50px">
+				<br>
+				<li>第五站</li>
+				<li>出發日期：2017年2月</li>
+				<li>原文冬令營—★★★清大活動中心百萬夜景！體驗入冬最低溫中睡袋的溫暖。享受米其林水木餐廳精緻台式合菜！
+				全台前百大導遊球球小姐和20股員伴您盡情樂遊！</li>
+				<li>注意事項：假吵架時地板溼滑＊小心跌倒＊</li>
+				<li>住宿：清華大學</li>
+				<br>
+				</ul>
+			</div>
+			<div id="date day6" style="background-color:#ffffff">	
+				<img id="photo" src="images/2017_3.jpg"	height="660" width="880" >	
+				<ul style="font-size:40px;margin:0px 50px">
+				<br>
+				<li>第六站</li>
+				<li>出發日期：2017年7月</li>
+				<li>原文大隊上山—＊加入即會員資格免費升級小隊長＊，再次體會32k森之步道（最知名的浪漫小徑），
+				原訂櫻花季因故延期至明年二月，還請您見諒。與20小隊員享受天倫之樂，觀賞夏季滿天星斗，蜜桃園採桃去！</li>
+				<li>注意事項：小心電鋸</li>
+				<li>住宿：泰崗部落、新光部落、司馬庫斯部落、養老部落</li>
+				</ul>
+			</div>
+			<div id="date day7" style="background-color:#DDDDDD">	
+				<img id="photo" src="images/2017_1.jpg"	height="660" width="880" >	
+				<ul style="font-size:40px;margin:0px 50px">
+				<br>
+				<li>第七站</li>
+				<li>出發日期：2017年10月</li>
+				<li>原文假日營—＊名額有限，僅限一名！敬請把握＊，三度體驗原文假日營，將您的食宿升級為營長規格，
+				超過30位玉峰國小學童將融化您的心！原文社20級、21級員工將與您同歡留下美好回憶！</li>
+				<li>住宿：玉峰國小</li>
+				<br>
+				</ul>
+			</div>
+			<div id="date day8" style="background-color:#ffffff">	
+				<img id="photo" src="images/2018_2.jpg"	height="660" width="880" >	
+				<ul style="font-size:40px;margin:0px 50px">
+				<br>
+				<li>第八站</li>
+				<li>出發日期：2018年2月</li>
+				<li>原文冬令營—＊北海道原工旅遊最終章＊，新竹冬季低溫中，尖石鄉孩子們溫暖的笑容！高級清夜定食讓您獲得身心靈滿足
+				，20級、21級原文社員工將提供您最窩心的伴遊！</li>
+				<li>注意事項：若您習慣早睡，不建議參加此行程。</li>
+				<li>住宿：清華大學</li>
+				<br>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+    <div class="footer">
+      <div class="container">
+        <p style="font-size:25px;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us&nbsp;&nbsp;</strong></p>
+      </div>
+	  <div class="container">
+		<a href="https://www.facebook.com/groups/227482207720310/"><img id="contactUs" src="images/contact.png" height="50"width="50"></a>
+      </div>
+    </div>
+  </body>
+</html>

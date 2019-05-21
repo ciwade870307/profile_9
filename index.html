@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 650)  {          /* 要滑動到選單的距離 */
+				$('.nav').addClass('navFixed');   /* 幫選單加上固定效果 */
+				} else {
+				$('.nav').removeClass('navFixed'); /* 移除選單固定效果 */
+				}
+			});
+		});
+		
+	</script>
+	
+	<script>
+        $(document).ready(function(){
+            for(i=0;i<3;i++){
+                $("#menu img:eq("+i+")").click({id:i},function(e){
+                    n=e.data.id
+                    change()
+                    clearInterval(clock)
+                    clock=setInterval(auto,3500)
+                })
+            }
+            n=0
+            clock=setInterval(auto,3500)
+            $("#products img").mouseover(function(){
+                clearInterval(clock)
+            })
+            $("#products img").mouseout(function(){
+                clock=setInterval(auto,3500)
+            })
+            function auto(){
+                n++
+                if(n>2){
+                    n=0
+                }
+                change()
+            }
+            function change(){
+                $("#products img").fadeOut(400,function(){
+                    $("#products img").attr("src","images/header_"+n+".png")
+                    $("#products img").fadeIn()
+                })
+                $("#products").css("background-image","url(images/images/header_"+n+".png)")
+                $("#menu img").attr("src","images/point_white.png")
+                $("#menu img:eq("+n+")").attr("src","images/point_gray.png")
+            }
+        })
+    </script>
+	
+  </head>
+  <body>
+	
+	
+	<div id=all>
+		<div id=products><img src="images/header_0.png" width=100% ></div>
+		
+	</div>
+	<!--
+	<div class="header">
+      <div class="container">
+      </div>
+    </div>
+	-->
+    <div class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">員工簡介</a></li><li><a href="index_photo.html">員工旅遊行程</a></li><li><a href="index_talk.html">公司陣容</a></li>
+        </ul>
+      </div>
+    </div>
+	
+	<div><div id=menu style="width:50%"><img src="images/point_gray.png"><img src="images/point_white.png"><img src="images/point_white.png"></div>
+	
+    <div class="main">
+      <div class="container">
+		<h2><strong>公司職員簡介</strong></h2>
+        <img id="bighead" src="images/head.png" height="600"width="600">
+        <p><strong>姓名 :</strong> 王宇航</p>
+        <p><strong>職稱 :</strong> 活動股長、副大隊長、大隊長、2017阿里營總召、2018原文假日營營長</p>
+		<p><strong>入社年份 :</strong> 2015-2017 
+        <p><strong>特殊表現 :</strong> 原文社打開包裝創始者、傘蜥蜴復育工作者、枕頭外翻成龜頭、性教育推廣者</p>
+      </div>
+	  <div class="container">
+		<h2><strong>員工表現</strong></h2>
+		<img src="images/chat.png" height="130" width="130" style="margin:0px; padding:0;position:relative; top:120px;">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;琪鑒 aka林口鄧紫棋<p>
+		<p>畢業快樂!謝謝航航當初找我當執密，從你身上學到很多做事的方法，在我當營長的時候也給我很多啟發跟建議。
+		也謝謝你辛苦的擔起大隊長的重責。祝你未來一切順利！</p>
+		<br>
+		<img src="images/chat.png" height="130" width="130" style="margin:0px; padding:0;position:relative; top:120px;">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;愛你的兒子ㄐㄩ<p>
+		<p>王宇航大五要繼續找我們吃晚餐喔。墜愛你了把拔<3（幹，樓上這是誰，把拔是我在叫的ㄟ）把拔延畢快樂，很感謝
+		這一年您願意分享您在創世紀一半的居所供我生存，我是真的很珍惜還能跟你們一起玩耍的日子，好愛好愛你們，真心覺得
+		你們是我這輩子交到最好的朋友了，好希望時就停在這一年（但是沒有這些考試）。好啦，感性的話不多說，反正我平常		也說得夠多且您並非要離開，但我們先相約畢業之後每年至少要約個5次跟大家見面聊天打屁聊議題！</p>
+		<br>
+		<img src="images/chat.png" height="130" width="130" style="margin:0px; padding:0;position:relative; top:120px;">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鈁淩<p>
+		<p>畢業快樂!謝謝你是我的密室股股長，那時候才跟你比較熟，覺得你很有才很會領導整個團隊，在帶假日營的時候更
+		從你身上學到很多做事的方法，能和你一起共事很開心~ 希望之後一切事事順心~<p>
+		<br>
+		<img src="images/chat.png" height="130" width="130" style="margin:0px; padding:0;position:relative; top:120px;">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;依潔<p>
+		<p>開始變熟是在阿里營的時候，還有期末社大一起在台達館地下室練 heart shaker，那時候覺得可以有這樣的一群人一
+		起快樂到忘記時間，笑到肚子痛真好，才真正的感受到所謂「同溫層」，在房地產也很罩，期末報告加油！賺大錢喔。</p>
+		<br>
+		<img src="images/chat.png" height="130" width="130" style="margin:0px; padding:0;position:relative; top:120px;">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;妤<p>
+		<p>謝謝你找我當課程股長，覺得你是個能屈能伸的人，很有條理也很會演戲XD祝你一路順遂</p>
+		<br>
+		<img src="images/chat.png" height="130" width="130" style="margin:0px; padding:0;position:relative; top:120px;">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;洋洋<p>
+		<p>畢業快樂~謝謝你在假日營的時候選擇了完全沒影帶營隊經驗的我還有之前原創週的密室股還有大隊長><，你是一個很酷
+		的人，默默地從你身上學到了很多事還有講話的方法。祝你以後在電子所能夠順順利利~</p>
+		<br>
+		<img src="images/chat.png" height="130" width="130" style="margin:0px; padding:0;position:relative; top:120px;">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匿名<p>
+		<p>整個原文19大概最先想感謝的人就是你了，因為你在材料系的社團介紹時間穿的很像要跳現代舞，然後滔滔不絕口條很好
+		的介紹原文我就莫名其妙被吸引了。雖然加入之後沒有和你有變太熟的機會，幸好還有社大的一支舞彌補了這個遺憾。謝謝
+		你讓我擁有兩年很棒的大學生活<3</p>
+	  </div>
+    </div>
+	
+    <div class="footer">
+      <div class="container">
+        <p style="font-size:25px;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us&nbsp;&nbsp;</strong></p>
+      </div>
+	  <div class="container">
+		<a href="https://www.facebook.com/groups/227482207720310/"><img id="contactUs" src="images/contact.png" height="50"width="50"></a>
+      </div>
+    </div>
+  </body>
+</html>
